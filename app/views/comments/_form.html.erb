@@ -1,0 +1,17 @@
+<!-- The form_for call here uses an array, which will build a nested route, such as /articles/1/comments. -->
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %>
+    <%= f.text_field :commenter %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
